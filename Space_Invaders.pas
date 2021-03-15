@@ -35,7 +35,7 @@ var
    type_of_game: (menu, game, go);
    alien_die,alien_move,players_die,players_shot: sound;
 
-//Îáğàáîòêà ïåğåõîäà íà ñëåäóşùèé óğîâåíü ñëîæíîñòè
+//ĞĞ±Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ° Ğ¿ĞµÑ€ĞµÑ…Ğ¾Ğ´Ğ° Ğ½Ğ° ÑĞ»ĞµĞ´ÑƒÑÑ‰Ğ¸Ğ¹ ÑƒÑ€Ğ¾Ğ²ĞµĞ½ÑŒ ÑĞ»Ğ¾Ğ¶Ğ½Ğ¾ÑÑ‚Ğ¸
 procedure Next_Level;
 var
    i,k: integer;
@@ -68,7 +68,7 @@ begin
    TMove.Start;
 end;
 
-//Ïğîöåäóğà óïğàâëåíèÿ ïóøêîé
+//ĞŸÑ€Ğ¾Ñ†ĞµĞ´ÑƒÑ€Ğ° ÑƒĞ¿Ñ€Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ñ Ğ¿ÑƒÑˆĞºĞ¾Ğ¹
 procedure KeyDown(key: integer);
 begin
    if type_of_game = game then
@@ -93,7 +93,7 @@ begin
          end;
 end;
 
-//Îòğèñîâêà ñòàòóñáàğà(î÷êè è æèçíè)
+//ĞÑ‚Ñ€Ğ¸ÑĞ¾Ğ²ĞºĞ° ÑÑ‚Ğ°Ñ‚ÑƒÑĞ±Ğ°Ñ€Ğ°(Ğ¾Ñ‡ĞºĞ¸ Ğ¸ Ğ¶Ğ¸Ğ·Ğ½Ğ¸)
 procedure StatusBar;
 begin
    GotoXY(8,1);
@@ -102,13 +102,13 @@ begin
    write('Lives   ',lives);
 end;
 
-//Îáğàáîòêà íàæàòèÿ êíîïêè Start
+//ĞĞ±Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ° Ğ½Ğ°Ğ¶Ğ°Ñ‚Ğ¸Ñ ĞºĞ½Ğ¾Ğ¿ĞºĞ¸ Start
 procedure MouseUp(x,y,mb: integer);
 begin
    if (type_of_game = menu) and ( (x>=214) and (y>=347) ) and ( (x<=421) and (y<=438) ) then type_of_game:=game;
 end;
 
-//Ïîäãîòîâêà èãğû
+//ĞŸĞ¾Ğ´Ğ³Ğ¾Ñ‚Ğ¾Ğ²ĞºĞ° Ğ¸Ğ³Ñ€Ñ‹
 procedure Init_Game;
 var
    i,k: integer;
@@ -170,7 +170,7 @@ begin
 end;
 
 
-//Ñîçäàíèå ìåíş
+//Ğ¡Ğ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ğµ Ğ¼ĞµĞ½Ñ
 procedure Main_menu;
 begin
    LoadWindow('.\Data\Pictures\menu.bmp');
@@ -180,7 +180,7 @@ begin
    KeyDown(VK_Left);
 end;
 
-//Ïğîöåäóğà âûñòğåëà ïğèøåëüöà
+//ĞŸÑ€Ğ¾Ñ†ĞµĞ´ÑƒÑ€Ğ° Ğ²Ñ‹ÑÑ‚Ñ€ĞµĞ»Ğ° Ğ¿Ñ€Ğ¸ÑˆĞµĞ»ÑŒÑ†Ğ°
 procedure Shot_Alien;
 var
    n,i: integer;
@@ -201,7 +201,7 @@ begin
    end;
 end;
 
-//Îáğàáîòêà çàõâàòà ïëàíåòû ïğèøåëüöàìè
+//ĞĞ±Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ° Ğ·Ğ°Ñ…Ğ²Ğ°Ñ‚Ğ° Ğ¿Ğ»Ğ°Ğ½ĞµÑ‚Ñ‹ Ğ¿Ñ€Ğ¸ÑˆĞµĞ»ÑŒÑ†Ğ°Ğ¼Ğ¸
 procedure Game_Over;
 begin
    TMove.Stop;
@@ -213,7 +213,7 @@ begin
    write('GAME OVER');
 end;
 
-//Äâèæåíèå ïğèøåëüöåâ
+//Ğ”Ğ²Ğ¸Ğ¶ĞµĞ½Ğ¸Ğµ Ğ¿Ñ€Ğ¸ÑˆĞµĞ»ÑŒÑ†ĞµĞ²
 procedure Move_Aliens;
 var
    i,k: integer;
@@ -268,7 +268,7 @@ begin
    Shot_Alien;
 end;
 
-//Îáğàáîòêà óíè÷òîæåíèÿ êîğàáëÿ
+//ĞĞ±Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ° ÑƒĞ½Ğ¸Ñ‡Ñ‚Ğ¾Ğ¶ĞµĞ½Ğ¸Ñ ĞºĞ¾Ñ€Ğ°Ğ±Ğ»Ñ
 procedure Destruction(x,y: integer);
 var
    i,k,l: integer;
@@ -310,7 +310,7 @@ begin
 
 end;
 
-//Äâèæåíèå ïóëè ïğèøåëüöà
+//Ğ”Ğ²Ğ¸Ğ¶ĞµĞ½Ğ¸Ğµ Ğ¿ÑƒĞ»Ğ¸ Ğ¿Ñ€Ğ¸ÑˆĞµĞ»ÑŒÑ†Ğ°
 procedure Move_Bullet_Alien;
 var
    hit: boolean;
@@ -346,7 +346,7 @@ begin
    redraw;
 end;
 
-//Äâèæåíèå ïóëè
+//Ğ”Ğ²Ğ¸Ğ¶ĞµĞ½Ğ¸Ğµ Ğ¿ÑƒĞ»Ğ¸
 procedure Move_Bullet;
 var
    k,i,l,m: integer;
@@ -382,7 +382,7 @@ begin
    redraw;
 end;
 
-//Íà÷àëî ïğîãğàììû
+//ĞĞ°Ñ‡Ğ°Ğ»Ğ¾ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñ‹
 begin
    randomize;
    
